@@ -10,7 +10,7 @@ ccw=-1                   #Variable ccw
 GPIO.setmode(GPIO.BCM)  #habilitar pines en formato BCM
 GPIO.setwarnings(false)
 GPIO.setup(dire, GPIO.OUT) #habilitar pin en salida
-GPIO.setup(step, GPIO.OUT) #habiliotar pin en salida 
+GPIO.setup(step, GPIO.OUT) #habilitar pin en salida 
 GPIO.output(dire, cw) 
 
 Pygame.display.init()   #Inicializa el atributo display del mando PS3
