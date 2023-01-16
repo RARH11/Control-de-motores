@@ -2,7 +2,7 @@ from time import sleep    #libreria time y habilitar sleep
 import RPi. GPIO as GPIO  
 GPIO.setmode(GPIO.BCN)   #pines en formato BCN
 servo=20                #pin 20 habilitado 
-GPIO.setup(servo, GPIO.OUT)   #pin en modo salidad 
+GPIO.setup(servo, GPIO.OUT)   #pin en modo salida 
 pwm =GPIO.PWM(servo, 50)   #pulso o frecuencia (este sera el valor a modificar) 
 pwm.start(0)
 
