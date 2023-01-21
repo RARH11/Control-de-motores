@@ -75,37 +75,37 @@ try:
                     GPIO.outut(ste, False)
                     sleep(0.01)
                     
-          if j.get_button(7): 
-            for y in range(0,6):
-              pwmservo.ChangeDutyCycle(y)
-              sleep(4)
-          if j.get_button(6): 
-            for y in range(5,0, -1):
-              pwmservo.ChangeDutyCycle(y)
-              sleep(4)
-          if j.get_button(4): 
-            for y in range(0,6):
-              pwmservo.ChangeDutyCycle(y)
-              sleep(4)
-          if j.get_button(5): 
-            for y in range(5,0, -1):
-              pwmservo.ChangeDutyCycle(y)
-              sleep(4)
-          if j.get_button(15): 
-            for y in range(0,6):
-              pwmservo.ChangeDutyCycle(y)
-              sleep(4)
-          if j.get_button(16): 
-            for y in range(5,0, -1):
-              pwmservo.ChangeDutyCycle(y)
-              sleep(4)
-          if j.get_button(1): 
-            for y in range(0,3):
-              pwmservo.ChangeDutyCycle(y)
+          if j.get_button(7): #boton R2, bajar segundo grado de libertad
+            for y in range(3,5): #Recorrido del servomotor
+              pwmservo.ChangeDutyCycle(y) #Ejucutar variable de recorrido
+              sleep(3)
+          if j.get_button(6): #boton L2, subir segundo grado de libertad
+            for y in range(3,0, -1): #Recorrido del servomotor
+              pwmservo.ChangeDutyCycle(y) #Ejucutar variable de recorrido
+              sleep(3)
+          if j.get_button(4):  #boton L1, bajar tercer grado de libertad
+            for h in range(3,5): #Recorrido del servomotor
+              pwmservo.ChangeDutyCycle(h) #Ejucutar variable de recorrido
+              sleep(3)
+          if j.get_button(5): #boton R1, subir tercer grado de libertad
+            for h in range(3,0, -1): #Recorrido del servomotor
+              pwmservo.ChangeDutyCycle(h) #Ejucutar variable de recorrido
+              sleep(3)
+          if j.get_button(15): #boton de direccion derecho, bajar muñeca  
+            for a in range(3,6): #Recorrido del servomotor
+              pwmservo.ChangeDutyCycle(a) #Ejucutar variable de recorrido
+              sleep(1)
+          if j.get_button(16):  #boton de direccion izquierdo, subir muñeca  
+            for a in range(3,0, -1): #Recorrido del servomotor
+              pwmservo.ChangeDutyCycle(a) #Ejucutar variable de recorrido
+              sleep(1)
+          if j.get_button(1): #boton cuadrado, cerrar garra  
+            for r in range(0,3): #Recorrido del servomotor
+              pwmservo.ChangeDutyCycle(r) #Ejucutar variable de recorrido
               sleep(0.1)
-          if j.get_button(3): 
-            for y in range(5,1, -1):
-              pwmservo.ChangeDutyCycle(y)
+          if j.get_button(3):        #boton circulo, abrir garra
+            for r in range(3,1, -1):  #Recorrido del servomotor
+              pwmservo.ChangeDutyCycle(r) #Ejucutar variable de recorrido
               sleep(0.1)
               
 except KeyboardInterrpt:
